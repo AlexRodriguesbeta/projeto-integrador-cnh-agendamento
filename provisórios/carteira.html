@@ -10,7 +10,7 @@
 <body>
     <div class="encapsulamento-carteira">
         <div class="carteira">
-            <div class="referencia"></div>
+            <!-- <div class="referencia"></div> -->
             <p class="header-carteira"><span id="UF">SP</span><span> - </span><span id="Município">São José dos Campos</span></p>
             <div class="corpo-carteira">
 
@@ -27,14 +27,44 @@
                     <p class="detalhes">CARRO: <span id="carro">VOLKSWAGEN</span><span> (</span><span id="ano">2017</span><span>)</span></p>
                     <p class="detalhes">EXPERIÊNCIA: <span id="experiencia">15</span><span> ANOS</span></p>
                     <p class="detalhes" style="text-align: center">DISPONIBILIDADE</p>
-                    <ul class="disponibilidade">
-                        <li>SEGUNDA</li>
-                        <li>TERÇA</li>
-                        <li>QUARTA</li>
-                        <li>QUINTA</li>
-                        <li>SEXTA</li>
-                        <li>SÁBADO</li>
-                    </ul>
+
+                    <table class="disponibilidade">
+                        <tr>
+                            <th>SEGUNDA</th>
+                            <th>TERÇA</th>
+                            <th>QUARTA</th>
+                            <th>QUINTA</th>
+                            <th>SEXTA</th>
+                            <th>SÁBADO</th>
+                        </tr>
+
+                        <tr>
+                            <td><img class="indisponivel" id="manha-segunda" src="img/manha.png" alt="Ícone Manhã"></td>
+                            <td><img id="manha-terca" src="img/manha.png" alt="Ícone Manhã"></td>
+                            <td><img id="manha-quarta" src="img/manha.png" alt="Ícone Manhã"></td>
+                            <td><img id="manha-quinta" src="img/manha.png" alt="Ícone Manhã"></td>
+                            <td><img class="indisponivel" id="manha-sexta" src="img/manha.png" alt="Ícone Manhã"></td>
+                            <td><img id="manha-sabado" src="img/manha.png" alt="Ícone Manhã"></td>
+                        </tr>
+
+                        <tr>
+                            <td><img id="tarde-segunda" src="img/tarde.png" alt="Ícone Manhã"></td>
+                            <td><img id="tarde-terca" src="img/tarde.png" alt="Ícone Manhã"></td>
+                            <td><img class="indisponivel" id="tarde-quarta" src="img/tarde.png" alt="Ícone Manhã"></td>
+                            <td><img class="indisponivel" id="tarde-quinta" src="img/tarde.png" alt="Ícone Manhã"></td>
+                            <td><img id="tarde-sexta" src="img/tarde.png" alt="Ícone Manhã"></td>
+                            <td><img id="tarde-sabado" src="img/tarde.png" alt="Ícone Manhã"></td>
+                        </tr>
+
+                        <tr>
+                            <td><img class="indisponivel" id="noite-segunda" src="img/noite.png" alt="Ícone Manhã"></td>
+                            <td><img id="noite-terca" src="img/noite.png" alt="Ícone Manhã"></td>
+                            <td><img id="noite-quarta" src="img/noite.png" alt="Ícone Manhã"></td>
+                            <td><img class="indisponivel" id="noite-quinta" src="img/noite.png" alt="Ícone Manhã"></td>
+                            <td><img class="indisponivel" id="noite-sexta" src="img/noite.png" alt="Ícone Manhã"></td>
+                            <td><img id="noite-sabado" src="img/noite.png" alt="Ícone Manhã"></td>
+                        </tr>
+                    </table>
                 
                 </div>
              
@@ -42,10 +72,6 @@
             </div>
             
         </div>
-
-
-
-
         <div class="carteira"><div class="contato"><img class="modelo" src="img/layout card.png" alt=""></div></div>
         <div class="carteira"><div class="contato"><img class="modelo" src="img/layout card.png" alt=""></div></div>
         <div class="carteira"><div class="contato"><img class="modelo" src="img/layout card.png" alt=""></div></div>

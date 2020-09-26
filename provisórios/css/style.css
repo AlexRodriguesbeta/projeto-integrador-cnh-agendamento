@@ -83,11 +83,12 @@ body {
 
 .corpo-carteira {
     display: flex;
+    flex-wrap: wrap;
     height: 78%;
 }
 
 .informacoes {
-    flex-grow: 1;
+    width: 65%;
     font-size: 12.5px;
 }
 
@@ -101,14 +102,29 @@ body {
 }
 
 .disponibilidade {
-    display: inline;
     font-size: 7px;
     padding: 0;
+    margin: 4px 6px 0 -1px;
 }
 
-.disponibilidade li {
-    display: inline;
-    margin-right: 4px;
+.disponibilidade th {
+    padding: 1px 0px 0px 4px;
+}
+
+.disponibilidade td {
+    padding: 4px 0px 0px 0px;
+}
+
+.indisponivel {
+    opacity: 0.3;
+}
+
+td img {
+    width: 10px;
+}
+
+td {
+    text-align: center;
 }
 
 .valor {
@@ -121,3 +137,4 @@ body {
 .valor span {
     font-size: 8px;
 }
+
