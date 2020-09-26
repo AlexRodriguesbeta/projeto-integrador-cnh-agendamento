@@ -1,0 +1,123 @@
+.carteira {
+    /* width: 90%; */
+    width: 289px;
+    margin: 5px auto;
+    border: solid 1px black;
+    border-radius: 10px;
+    height: 27vh;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.referencia {
+    background-image: url('E:/OneDrive/Área de Trabalho/Digital House/PI/Repositório/projeto-integrador-cnh-agendamento/provisórios/img/layout card.png');
+    background-size: cover;
+    opacity: 0.5;
+    width: 90%;
+    margin: 0 auto;
+    border: solid 1px black;
+    border-radius: 10px;
+    height: 27vh;
+    box-sizing: border-box;
+    z-index:-1;
+    position: absolute;
+}
+
+.encapsulamento-carteira {
+    margin: 0 0;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-evenly;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 0;
+    box-sizing: border-box;
+}
+
+.header-carteira {
+    padding: 2px 5px 2px 5px;
+    text-align: center;
+    font-size: 23px;
+    color: white;
+    background-color: rgb(16,172,213);
+    margin: 0 auto;
+    /* border-top-left-radius: 8.8px;
+    border-top-right-radius: 8.8px; */
+    border: black 1px solid;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    box-sizing: border-box;
+}
+
+.foto {
+    width:90%;
+    margin: 8px 0 0 8px;
+    box-sizing: border-box;
+}
+
+.contato {
+    width: 35%;
+    box-sizing: border-box;
+}
+
+.botao-contato {
+    border-radius: 0;
+    font-size: 9px;
+    width: 79%;
+    padding: 2px;
+    line-height: 1;
+    display: block;
+    margin: 7px 7px 0 14px;
+    border-color: rgb(1,163,210);
+    background-color: rgb(1,163,210);
+    border-radius: 1px;
+}
+
+.modelo {
+    width: 286%;
+}
+
+.corpo-carteira {
+    display: flex;
+    height: 78%;
+}
+
+.informacoes {
+    flex-grow: 1;
+    font-size: 12.5px;
+}
+
+#nome-usuario {
+    margin: 4px 0 0 1px;
+}
+
+.detalhes {
+    margin: 3px 0 0 1px;
+    font-size: 9.3px;
+}
+
+.disponibilidade {
+    display: inline;
+    font-size: 7px;
+    padding: 0;
+}
+
+.disponibilidade li {
+    display: inline;
+    margin-right: 4px;
+}
+
+.valor {
+    font-size: 6px;
+    text-align: center;
+    margin-top: 3px;
+    margin-left: 5px;
+}
+
+.valor span {
+    font-size: 8px;
+}
