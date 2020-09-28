@@ -1,19 +1,37 @@
+@import url('../fonts/Myriad\ Pro\ Regular.otf');
+
 .carteira {
-    /* width: 90%; */
-    width: 289px;
+    font-family: 'Myriad Pro Regular', sans-serif;
+    font-style: normal;
+    background-image: url('../img/Background\ Carteira.png');
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* width: 289px; */
+    width: 90%;
     margin: 5px auto;
     border: solid 1px black;
     border-radius: 10px;
-    height: 27vh;
     box-sizing: border-box;
     overflow: hidden;
+}
+
+.header-fundo {
+    width: 89.5%;
+    box-sizing: border-box;
+    position: absolute;
+    height: 6%;
+    background-color: rgb(16,172,213);
+    z-index: -1;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
 }
 
 .referencia {
     background-image: url('E:/OneDrive/Área de Trabalho/Digital House/PI/Repositório/projeto-integrador-cnh-agendamento/provisórios/img/layout card.png');
     background-size: cover;
     opacity: 0.5;
-    width: 90%;
+    width: 289px;
     margin: 0 auto;
     border: solid 1px black;
     border-radius: 10px;
@@ -36,21 +54,23 @@ body {
     margin: 0 0;
     box-sizing: border-box;
 }
-
 .header-carteira {
-    padding: 2px 5px 2px 5px;
-    text-align: center;
-    font-size: 23px;
-    color: white;
-    background-color: rgb(16,172,213);
-    margin: 0 auto;
-    /* border-top-left-radius: 8.8px;
-    border-top-right-radius: 8.8px; */
-    border: black 1px solid;
-    border-top: 0;
-    border-right: 0;
-    border-left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 12px;
+    color: black;
     box-sizing: border-box;
+    width: 100%;
+    height: 40px;
+}
+
+#uf, #municipio {
+    font-weight: bold;
+}
+
+.header-direita {
+    float: right;
 }
 
 .foto {
@@ -75,6 +95,7 @@ body {
     border-color: rgb(1,163,210);
     background-color: rgb(1,163,210);
     border-radius: 1px;
+    box-sizing: border-box;
 }
 
 .modelo {
@@ -98,21 +119,26 @@ body {
 
 .detalhes {
     margin: 3px 0 0 1px;
-    font-size: 9.3px;
+    font-size: 9px;
 }
 
-.disponibilidade {
-    font-size: 7px;
+.disponibilidade-tabela {
+    border-collapse: separate;
+    border-spacing: 4px;
+    font-size: 6.5px;
     padding: 0;
-    margin: 4px 6px 0 -1px;
+    margin: 0px 0px 0 0px;
+    box-sizing: border-box;
 }
 
-.disponibilidade th {
-    padding: 1px 0px 0px 4px;
+.disponibilidade-tabela th {
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.disponibilidade td {
-    padding: 4px 0px 0px 0px;
+.disponibilidade-tabela td {
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .indisponivel {
@@ -125,16 +151,168 @@ td img {
 
 td {
     text-align: center;
+    box-sizing: border-box;
 }
 
 .valor {
     font-size: 6px;
     text-align: center;
-    margin-top: 3px;
-    margin-left: 5px;
+    margin: 2px 0 0 5px;
 }
 
 .valor span {
     font-size: 8px;
 }
 
+#municipio {
+    text-transform: uppercase;
+}
+
+.disponibilidade-texto {
+    font-weight: 700;
+    font-style: normal;
+    font-size: 11px;
+    margin: 1px auto;
+    text-align: center;
+}
+
+@media (min-width:375px) {
+
+    .carteira {
+        height: 198px;
+        width: 326.25px;
+    }
+
+    .referencia {
+        width: 326px;
+        height: 197px;    
+    }
+
+    .header-fundo {
+        height: 43px;
+        width: 324.3px;
+    }
+
+    .header-carteira {
+        font-size: 14px;
+        height: 22%;
+    }
+
+    .foto {
+        width: 88%;
+        margin-top: 12px;
+        margin-left: 10px;
+    }
+
+    .botao-contato {
+        font-size: 10px;
+        margin-top: 8px;
+        margin-left: 15px;
+        width: 80%;
+    }
+
+    .informacoes {
+        font-size: 14px;
+    }
+
+    .detalhes {
+        margin-top: 3px;
+        font-size: 10px;
+    }
+
+    .disponibilidade-texto {
+        font-size: 12px;
+    }
+
+    .disponibilidade-tabela {
+        font-size: 7.5px;
+    }
+
+    .valor {
+        font-size: 7px;
+        margin-top: 4px;
+    }
+
+    .valor span {
+        font-size: 9px;
+    }
+
+    #nome-usuario {
+        margin-top: 6px;
+    }
+
+    td img {
+        width: 12px;
+    }
+
+}
+
+@media (min-width:1024px) {
+
+    .carteira {
+        height: 261px;
+        width: 432px;
+    }
+
+    .referencia {
+        height: 261px;
+        width: 432px;  
+    }
+
+    .header-fundo {
+        height: 57px;
+        width: 431px;
+    }
+
+    .header-carteira {
+        font-size: 18px;
+    }
+
+    .foto {
+        width: 89%;
+        margin-top: 15px;
+        margin-left: 13px;
+    }
+
+    .botao-contato {
+        font-size: 13px;
+        margin-top: 12px;
+        margin-left: 20px;
+    }
+
+    .valor {
+        font-size: 9px;
+        margin-top: 6px;
+    }
+
+    .valor span {
+        font-size: 11px;
+    }
+
+    .informacoes {
+        font-size: 18px;
+    }
+
+    #nome-usuario {
+        margin-top: 9px;
+    }
+
+    .detalhes {
+        font-size: 14px;
+    }
+
+    .disponibilidade-texto {
+        font-size: 15px;
+        margin: 2px auto;
+    }
+
+    .disponibilidade-tabela {
+        font-size: 10px;
+    }
+
+    td img {
+        padding-top: 3px;
+        width: 16px;
+    }
+
+}
