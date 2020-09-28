@@ -1,5 +1,119 @@
 @import url('../fonts/Myriad\ Pro\ Regular.otf');
 
+* {
+    padding:0;
+    margin:0;
+    vertical-align:baseline;
+    top: 0;
+    right: 0;
+    box-sizing: border-box;
+}
+
+/*  Nav */
+.bg-primary{
+    background-color: rgb(1,163,210) !important; 
+}
+
+.navbar{
+    padding: 15px 0px ; 
+}
+
+.navbar-brand{
+    font-size: 1.6em !important;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.navbar-nav{
+    font-family: Segoe UI Bold;
+    font-size: 1.3em;
+    letter-spacing: .1rem;
+}
+
+.nav-item{
+    margin: 0px 15px;
+} 
+
+
+.nav-link{
+    color: white !important;
+    opacity: 0.8;
+}
+
+.nav-link:hover{
+    padding-bottom: 3px; 
+    border-bottom-width: 3px; 
+    border-bottom-style: solid; 
+    border-bottom-color: #191970; 
+    opacity: 1;
+}
+
+@media (max-width: 995px){
+    .nav-item{
+        margin: 0px 5px;
+        
+    } 
+
+    .navbar-brand{
+        font-size: 1.4em !important;
+    }
+
+    .navbar-nav{
+        font-size: 1.2em !important;  
+    }
+
+    .container{
+        padding: 0px 2px;
+    }
+}
+
+
+@media (max-width: 774px){
+    .navbar-brand{
+        font-size: 1.2em !important;
+    }
+
+    .nav-item{
+        margin: 0px 8px;
+    } 
+
+    .navbar-nav{
+        font-size: 1em !important;
+        letter-spacing: 0;
+    }
+}
+
+
+@media (max-width: 575px){
+    .navbar-brand{
+        margin-left: 25px; 
+        font-size: 1.6em !important;
+    }
+
+    .nav-item{
+        text-align: center;
+        margin: 2px 0px;
+    } 
+
+    .nav-link:hover{
+        padding-bottom: 8px; 
+        border: none; 
+        opacity: 1;
+    }
+
+    .navbar-nav{
+        border-top-width: 1px; 
+        border-top-style: solid; 
+        border-top-color: #191970; 
+        margin-top: 15px ; 
+        letter-spacing: .1rem;
+        font-size: 1.2em !important;
+    }
+}
+
+/*  /Nav */
+
+/* Carteira abaixo */
+
 .carteira {
     font-family: 'Myriad Pro Regular', sans-serif;
     font-style: normal;
@@ -16,7 +130,7 @@
     overflow: hidden;
 }
 
-.header-fundo {
+.header-fundo-carteira {
     width: 89.5%;
     box-sizing: border-box;
     position: absolute;
@@ -50,10 +164,6 @@
     box-sizing: border-box;
 }
 
-body {
-    margin: 0 0;
-    box-sizing: border-box;
-}
 .header-carteira {
     display: flex;
     align-items: center;
@@ -69,22 +179,22 @@ body {
     font-weight: bold;
 }
 
-.header-direita {
+.header-direita-carteira {
     float: right;
 }
 
-.foto {
+.foto-carteira {
     width:90%;
     margin: 8px 0 0 8px;
     box-sizing: border-box;
 }
 
-.contato {
+.contato-carteira {
     width: 35%;
     box-sizing: border-box;
 }
 
-.botao-contato {
+.botao-contato-carteira {
     border-radius: 0;
     font-size: 9px;
     width: 79%;
@@ -108,7 +218,7 @@ body {
     height: 78%;
 }
 
-.informacoes {
+.informacoes-carteira {
     width: 65%;
     font-size: 12.5px;
 }
@@ -117,7 +227,7 @@ body {
     margin: 4px 0 0 1px;
 }
 
-.detalhes {
+.detalhes-carteira {
     margin: 3px 0 0 1px;
     font-size: 9px;
 }
@@ -154,13 +264,13 @@ td {
     box-sizing: border-box;
 }
 
-.valor {
+.valor-carteira {
     font-size: 6px;
     text-align: center;
     margin: 2px 0 0 5px;
 }
 
-.valor span {
+.valor-carteira span {
     font-size: 8px;
 }
 
@@ -188,7 +298,7 @@ td {
         height: 197px;    
     }
 
-    .header-fundo {
+    .header-fundo-carteira {
         height: 43px;
         width: 324.3px;
     }
@@ -198,24 +308,24 @@ td {
         height: 22%;
     }
 
-    .foto {
+    .foto-carteira {
         width: 88%;
         margin-top: 12px;
         margin-left: 10px;
     }
 
-    .botao-contato {
+    .botao-contato-carteira {
         font-size: 10px;
         margin-top: 8px;
         margin-left: 15px;
         width: 80%;
     }
 
-    .informacoes {
+    .informacoes-carteira {
         font-size: 14px;
     }
 
-    .detalhes {
+    .detalhes-carteira {
         margin-top: 3px;
         font-size: 10px;
     }
@@ -228,12 +338,12 @@ td {
         font-size: 7.5px;
     }
 
-    .valor {
+    .valor-carteira {
         font-size: 7px;
         margin-top: 4px;
     }
 
-    .valor span {
+    .valor-carteira span {
         font-size: 9px;
     }
 
@@ -259,7 +369,7 @@ td {
         width: 432px;  
     }
 
-    .header-fundo {
+    .header-fundo-carteira {
         height: 57px;
         width: 431px;
     }
@@ -268,28 +378,28 @@ td {
         font-size: 18px;
     }
 
-    .foto {
+    .foto-carteira {
         width: 89%;
         margin-top: 15px;
         margin-left: 13px;
     }
 
-    .botao-contato {
+    .botao-contato-carteira {
         font-size: 13px;
         margin-top: 12px;
         margin-left: 20px;
     }
 
-    .valor {
+    .valor-carteira {
         font-size: 9px;
         margin-top: 6px;
     }
 
-    .valor span {
+    .valor-carteira span {
         font-size: 11px;
     }
 
-    .informacoes {
+    .informacoes-carteira {
         font-size: 18px;
     }
 
@@ -297,7 +407,7 @@ td {
         margin-top: 9px;
     }
 
-    .detalhes {
+    .detalhes-carteira {
         font-size: 14px;
     }
 
