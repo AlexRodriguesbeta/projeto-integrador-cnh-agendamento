@@ -1,32 +1,33 @@
 @import url('../fonts/Myriad\ Pro\ Regular.otf');
 
 /*  Nav */
-.bg-primary{
-    background-color: rgb(1,163,210) !important; 
-}
-
 .navbar{
-    padding: 15px 0px ; 
+    padding: 25px 0px;  
+    background-color: rgb(1,163,210); 
+    top:0;
+    left:0;
 }
 
 .navbar-brand{
-    font-size: 1.6em !important;
+    font-size: 1.8em;
     font-family: 'Montserrat', sans-serif;
+    opacity: 0.8; 
 }
 
-.navbar-nav{
-    font-family: Segoe UI Bold;
-    font-size: 1.3em;
-    letter-spacing: .1rem;
+.navbar-brand:hover{
+    color: #fff; 
+    opacity: 1;
 }
 
 .nav-item{
     margin: 0px 15px;
 } 
 
-
 .nav-link{
-    color: white !important;
+    font-family: 'Segoe UI Bold';
+    font-size: 1.3em;
+    letter-spacing: .1rem;
+    color: #fff !important; 
     opacity: 0.8;
 }
 
@@ -36,54 +37,56 @@
     border-bottom-style: solid; 
     border-bottom-color: #191970; 
     opacity: 1;
+    color: #fff; 
+}
+
+.navbar-toggler-icon{
+    border: 1px solid #fff;
 }
 
 @media (max-width: 995px){
+    .navbar{
+        padding: 15px 0px;  
+    }
+    
     .nav-item{
         margin: 0px 5px;
-        
     } 
-
-    .navbar-brand{
-        font-size: 1.4em !important;
-    }
-
-    .navbar-nav{
-        font-size: 1.2em !important;  
-    }
 
     .container{
         padding: 0px 2px;
-    }
+    }  
 }
 
-
-@media (max-width: 774px){
+@media (max-width: 767px){
     .navbar-brand{
-        font-size: 1.2em !important;
+        font-size: 1.3em; 
     }
-
-    .nav-item{
-        margin: 0px 8px;
-    } 
-
+    
     .navbar-nav{
-        font-size: 1em !important;
-        letter-spacing: 0;
+        letter-spacing: .1rem;
+        font-size: 0.7em;  
     }
 }
-
 
 @media (max-width: 575px){
     .navbar-brand{
         margin-left: 25px; 
-        font-size: 1.6em !important;
+        font-size: 1.7em;
+    }
+
+    .navbar-nav{
+        border-top-width: 1px; 
+        border-top-style: solid; 
+        border-top-color: #191970; 
+        margin-top: 15px;
+        font-size: 0.9em;   
     }
 
     .nav-item{
         text-align: center;
         margin: 2px 0px;
-    } 
+    }
 
     .nav-link:hover{
         padding-bottom: 8px; 
@@ -91,16 +94,7 @@
         opacity: 1;
     }
 
-    .navbar-nav{
-        border-top-width: 1px; 
-        border-top-style: solid; 
-        border-top-color: #191970; 
-        margin-top: 15px ; 
-        letter-spacing: .1rem;
-        font-size: 1.2em !important;
-    }
 }
-
 /*  /Nav */
 
 /* Carteira abaixo */
