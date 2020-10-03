@@ -116,10 +116,10 @@
 }
 
 .header-fundo-carteira {
+    height: 40px;
     width: 89.5%;
     box-sizing: border-box;
     position: absolute;
-    height: 6%;
     background-color: rgb(16,172,213);
     z-index: -1;
     border-top-left-radius: 9px;
@@ -160,8 +160,9 @@
     height: 40px;
 }
 
-#uf, #municipio {
+.uf, .municipio {
     font-weight: bold;
+    text-transform: uppercase;
 }
 
 .header-direita-carteira {
@@ -172,6 +173,11 @@
     width:90%;
     margin: 8px 0 0 8px;
     box-sizing: border-box;
+}
+
+.foto-usuario {
+    max-height: 100px;
+    overflow: hidden;
 }
 
 .contato-carteira {
@@ -208,7 +214,7 @@
     font-size: 12.5px;
 }
 
-#nome-usuario {
+.nome-usuario {
     margin: 4px 0 0 1px;
 }
 
@@ -259,10 +265,6 @@ td {
     font-size: 8px;
 }
 
-#municipio {
-    text-transform: uppercase;
-}
-
 .disponibilidade-texto {
     font-weight: 700;
     font-style: normal;
@@ -272,6 +274,10 @@ td {
 }
 
 @media (min-width:375px) {
+
+    .foto-usuario {
+        max-height: 113.5px;
+    }
 
     .carteira {
         height: 198px;
@@ -332,7 +338,7 @@ td {
         font-size: 9px;
     }
 
-    #nome-usuario {
+    .nome-usuario {
         margin-top: 6px;
     }
 
@@ -369,6 +375,11 @@ td {
         margin-left: 13px;
     }
 
+    .foto-usuario {
+        max-height: 150px;
+        overflow: hidden;
+    }
+
     .botao-contato-carteira {
         font-size: 13px;
         margin-top: 12px;
@@ -388,7 +399,7 @@ td {
         font-size: 18px;
     }
 
-    #nome-usuario {
+    .nome-usuario {
         margin-top: 9px;
     }
 
