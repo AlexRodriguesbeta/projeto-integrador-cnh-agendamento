@@ -1,18 +1,172 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agendamento CNH</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css"> 
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agendamento CNH</title>
+  <link rel="stylesheet" href="styles/bootstrap.min.css">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/valores.css">
+  <link rel="stylesheet" href="styles/footer.css">
 </head>
+
 <body>
+  
+
     
-    
-    
-    <script src="js/jquery-3.5.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script> 
-    <script src="js/scripts.js"></script>
+    <section id="home" class="home-filter-img alinhamento">
+      <div class="home-filter"></div>
+         <div class="container home-filter-container">
+                         <div class="home-div1" >
+                             <h1 class="home-titulo">TIRE A SUA HABILITAÇÃO</h1>
+                             <h2 class="home-subtitulo">NO SEU RITMO E CONFORME SUA DISPONIBILIDADE DE HORÁRIO</h2>
+                             <p class="home-paragrafo">Nossos instrutores passam por uma rigorosa entrevista, são avaliados psicologicamente, e após passarem nos testes eles podem se cadastrar na nossa plataforma e oferecem seus serviços. Assim garantimos a segurança e qualidade que são essenciais.</p>
+                             <!-- <a href="#" class="btn-agende">AGENDE</a> -->
+                             <button class="btn-agende">AGENDE</button>
+                         </div>
+         </div>
+     </section>
+ 
+ 
+     <section class="quemsomos alinhament">
+         <div class="quemsomos-filter"></div>
+         <div class="container alinhamento div-quemsomos quemsomos-filter-container">
+             <h1 class="quemsomos-h1">QUEM SOMOS</h1>
+             <p class="quemsomos-paragrafo">Nós surgimos a partir da necessidade de muitas pessoas que sonham em tirar a sua <a class="quemsomos-paragrafo-destaque"> primeira habilitação</a>, porém não conseguem devido aos dias, horários e altos preços praticados pelas autoescolas.</p>
+             <p class="quemsomos-paragrafo">Oferecemos o sistema de agendamento com ampla disponibilidade de instrutores.</p>
+         </div>
+     </section>
+
+ <div id="page">
+    <!-- Valores -->
+    <div id="valores">
+      <div class="valores-container">
+        <div class="cards-valores">
+          <div class="icones">
+            <img class="icone-valores" src="./img/seguranca.png" alt="">
+          </div>
+          <h3 class="titulo-valores">Segurança</h3>
+          <p class="texto-valores">Monitoramos nossos instrutores de perto, garantindo a seguranca de nossos clientes.
+          </p>
+        </div>
+        <div class="cards-valores">
+          <div class="icones">
+            <img class="icone-valores " src="./img/pesquisas.png" alt="">
+          </div>
+          <h3 class="titulo-valores">Pesquisas</h3>
+          <p class="texto-valores">Nós queremos que nossos clientes fiquem satisfeitos e consigam a sua sonhada CNH.
+            Para
+            isso, realizamos pesquisas de satisfação constantemente.</p>
+        </div>
+        <div class="cards-valores">
+          <div class="icones">
+            <img class="icone-valores " src="./img/analises.png" alt="">
+          </div>
+          <h3 class="titulo-valores">Análises</h3>
+          <p class="texto-valores">Nossos instrutores passam por rigorosas avaliações psicológicas e comportamentais,
+            garantindo um serviço profissional e seguro.</p>
+        </div>
+        <div class="cards-valores">
+          <div class="icones">
+            <img class="icone-valores " src="./img/instrutores.png" alt="">
+          </div>
+          <h3 class="titulo-valores">Instrutores</h3>
+          <p class="texto-valores">Se você se identificou com a gente e deseja se tornar um instrutor, entre em contato
+            conosco. Ficaremos felizes em tê-lo no nosso time.</p>
+        </div>
+      </div>
+
+      <div id="content-container">
+
+        <div id="control-left" class="controls">
+          <section id="prev">&#10094;</section>
+        </div>
+
+        <div id="carousel-container">
+          <div class="carousel-hidden">
+            <ul id="carousel" class="animate">
+              <li class="slide animate">
+                <div class="icons cards">
+                  <img class="icons image" src="./img/seguranca.png" />
+                  <h3 class="titulo-valores">Segurança</h3>
+                  <p class="texto-valores">Monitoramos nossos instrutores de perto, garantindo a seguranca de nossos
+                    clientes.
+                  </p>
+                </div>
+              </li>
+              <li class="slide animate">
+                <div class="icons cards">
+                  <img class="icons image" src="./img/pesquisas.png" />
+                  <h3 class="titulo-valores">Pesquisas</h3>
+                  <p class="texto-valores">Nós queremos que nossos clientes fiquem satisfeitos e consigam a sua sonhada
+                    CNH.
+                    Para isso, realizamos pesquisas de satisfação constantemente.</p>
+                </div>
+              </li>
+              <li class="slide animate">
+                <div class="icons cards">
+                  <img class="icons image" src="./img/analises.png" />
+                  <h3 class="titulo-valores">Análises</h3>
+                  <p class="texto-valores">Nossos instrutores passam por rigorosas avaliações psicológicas e
+                    comportamentais,
+                    garantindo um serviço profissional e seguro.</p>
+                </div>
+              </li>
+              <li class="slide animate">
+                <div class="icons cards">
+                  <img class="icons image" src="./img/instrutores.png" />
+                  <h3 class="titulo-valores">Instrutores</h3>
+                  <p class="texto-valores">Se você se identificou com a gente e deseja se tornar um instrutor, entre em
+                    contato conosco. Ficaremos felizes em tê-lo no nosso time.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div id="control-right" class="controls">
+          <section id="next">&#10095;</section>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <section class="flex">
+        <div class="column text-align">
+          <ul class='listStyle'>
+            <li class="inlineBlock resp3">
+              <img id="balao" src="img/balao_branco.png" alt="Balão branco de dúvidas">
+              <span id="duvidas">DÚVIDAS</span>
+            </li>
+          </ul>
+          <p id="especialistas">Nossos especialistas estão prontos para te atender.</p>
+          <p id="email">cnhpratica@cnhpratica.com.br</p>
+        </div>
+        <div class="column">
+          <ul class='listStyle resp1'>
+            <li>
+              <img id="imgMapa" src="img/map.png" alt="Ponto de referência em mapa">
+              <span id="endereco">Rua Numero, 0 - conj. 0 - 0 andar</span>
+            </li>
+          </ul>
+          <ul class='listStyle resp2'>
+            <li>
+              <img id="imgTelefone" src="img/call.png" alt="Telefone">
+              <span id="telefone">11 1234-5678</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </footer>
+  </div>
+
+  
+  <script src="js/scripts.js"></script>
+  <script src="js/jquery-3.5.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script> 
+
+  <script src="./js/valores.js"></script>
 </body>
+
 </html>
