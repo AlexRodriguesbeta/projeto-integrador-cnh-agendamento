@@ -1,22 +1,6 @@
-//Request do Sheetson, pede a planilha inteira
-// myHeaders = new Headers({
-//     "Authorization": "Bearer m_v4qYCfdSzeVczUDFbob_AkExEaVzYobSUhULVuGXYO1VOlJnlaSPt36oyT0Q",
-//     "X-Spreadsheet-Id": "1sHxAUBPyx-RnViA4dtb2M5Uhrr8TzBgL-a0fnJRoP_8",
-//   });
-
-// var myInit = { method: 'GET',
-//                headers: myHeaders,
-//                mode: 'cors',
-//                cache: 'default' };
-
-// fetch('https://api.sheetson.com/v2/sheets/BaseCNH',myInit)
-// .then(function(response) {
-//     let retorno = response.json();
-//     console.log(retorno);
-//     return retorno;
-// })
-
 // const url = 'https://sheet.best/api/sheets/bbd84ec6-c651-495d-b922-c3c9afcbc8c1';
+
+//Para teste, rode um json server com o arquivo DB_Carteira.json dentro da pasta js
 const url = 'http://localhost:3000/data';
 
 //Retorna todos os dados da API
@@ -56,73 +40,6 @@ async function buscarLinhasAleatorias(quantidade) {
     }
     return infos;
 }
-
-// const infoTeste = [
-//     {
-//         "id": "2",
-//         "foto-carteira": "https://www.prescriptum.com.br/wp-content/uploads/2015/12/placeholder-usuario-500x500.jpg",
-//         "numero-carteira": "42994233493",
-//         "celular": "(11) 98055-8488",
-//         "uf": "SP",
-//         "municipio": "Cotia",
-//         "experiencia": "11",
-//         "nome-usuario": "Antônio Pereira Souza",
-//         "Idade": "31",
-//         "marca-carro": "Citroën",
-//         "ano-carro": "2009",
-//         "valor": "150",
-//         "manha-segunda": "true",
-//         "tarde-segunda": "false",
-//         "noite-segunda": "false",
-//         "manha-terca": "false",
-//         "tarde-terca": "true",
-//         "noite-terca": "true",
-//         "manha-quarta": "true",
-//         "tarde-quarta": "false",
-//         "noite-quarta": "false",
-//         "manha-quinta": "true",
-//         "tarde-quinta": "true",
-//         "noite-quinta": "false",
-//         "manha-sexta": "true",
-//         "tarde-sexta": "true",
-//         "noite-sexta": "false",
-//         "manha-sabado": "false",
-//         "tarde-sabado": "true",
-//         "noite-sabado": "false"
-//       },
-//       {
-//         "id": "1",
-//         "foto-carteira": "https://www.prescriptum.com.br/wp-content/uploads/2015/12/placeholder-usuario-500x500.jpg",
-//         "numero-carteira": "77651928203",
-//         "celular": "(11) 91376-9738",
-//         "uf": "SP",
-//         "municipio": "São José dos Campos",
-//         "experiencia": "19",
-//         "nome-usuario": "Davi Barbosa Melo",
-//         "Idade": "39",
-//         "marca-carro": "Fiat",
-//         "ano-carro": "2012",
-//         "valor": "150",
-//         "manha-segunda": "false",
-//         "tarde-segunda": "false",
-//         "noite-segunda": "true",
-//         "manha-terca": "true",
-//         "tarde-terca": "false",
-//         "noite-terca": "false",
-//         "manha-quarta": "false",
-//         "tarde-quarta": "false",
-//         "noite-quarta": "true",
-//         "manha-quinta": "false",
-//         "tarde-quinta": "true",
-//         "noite-quinta": "true",
-//         "manha-sexta": "false",
-//         "tarde-sexta": "false",
-//         "noite-sexta": "false",
-//         "manha-sabado": "false",
-//         "tarde-sabado": "true",
-//         "noite-sabado": "true"
-//       }
-// ]
 
 //Desenha as carteiras na tela já com suas informações buscadas na API
 async function desenharCarteiras(info) {
@@ -202,12 +119,10 @@ async function desenharCarteiras(info) {
         //Desenha a carteira vazia
         document.querySelector('.encapsulamento-carteira').innerHTML += estruturaCarteira;
         //Insere os dados na carteira vazia
-        Object.getOwnPropertyNames(pessoa).forEach(function(propriedade, idx, array) {
+        Object.getOwnPropertyNames(pessoa).forEach(propriedade => {
             //propriedade = nome da propriedade (ex: id, telefone, nome-usuario)
             //pessoa[propriedade] = valor da propriedade
             let propriedadeDOM = document.getElementById(`${propriedade}${i}`);
-            // console.log(propriedade);
-            // console.log(propriedadeDOM);
 
             //Se a propriedade for "false", então é um dia que a pessoa não está disponível
             if (pessoa[propriedade] == "false") {
@@ -215,15 +130,14 @@ async function desenharCarteiras(info) {
                 //Se a propriedade for "true", então é um dia que a pessoa está disponível e nada precisa ser feito
                 //Se a propriedade buscado no DOM for null, então a propriedade não existe no DOM e deve ser pulada
             } else if (pessoa[propriedade] == "true" || propriedadeDOM == null) {
-                console.log("Propriedade não existe no DOM");
+                console.log("Nada precisa ser feito ou propriedade não existe no DOM");
                 //A foto da carteira usa uma propriedade no src, e não no innerText
             } else if (propriedade == "foto-carteira") {
                 propriedadeDOM.src = pessoa[propriedade];
                 //Setando o valor da propriedade com innerText
             } else {
                 propriedadeDOM.innerText = pessoa[propriedade];
-            }
-            // console.log(propriedade + ' -> ' + pessoa[propriedade]);
+            };
           });
         i++
     })
