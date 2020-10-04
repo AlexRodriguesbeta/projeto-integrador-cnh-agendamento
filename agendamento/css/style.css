@@ -1,0 +1,303 @@
+@import url('../fonts/Myriad\ Pro\ Regular.otf');
+
+/*  Nav */
+.navbar{
+    padding: 25px 0px;  
+    background-color: rgb(1,163,210); 
+    top:0;
+    left:0;
+}
+
+.navbar-brand{
+    font-size: 1.8em;
+    font-family: 'Montserrat', sans-serif;
+    opacity: 0.8; 
+}
+
+.navbar-brand:hover{
+    color: #fff; 
+    opacity: 1;
+}
+
+.nav-item{
+    margin: 0px 15px;
+} 
+
+.nav-link{
+    font-family: 'Segoe UI Bold';
+    font-size: 1.3em;
+    letter-spacing: .1rem;
+    color: #fff !important; 
+    opacity: 0.8;
+}
+
+.nav-link:hover{
+    padding-bottom: 3px; 
+    border-bottom-width: 3px; 
+    border-bottom-style: solid; 
+    border-bottom-color: #191970; 
+    opacity: 1;
+    color: #fff; 
+}
+
+.navbar-toggler-icon{
+    border: 1px solid #fff;
+}
+
+@media (max-width: 995px){
+    .navbar{
+        padding: 15px 0px;  
+    }
+    
+    .nav-item{
+        margin: 0px 5px;
+    } 
+
+    .container{
+        padding: 0px 2px;
+    }  
+}
+
+@media (max-width: 767px){
+    .navbar-brand{
+        font-size: 1.3em; 
+    }
+    
+    .navbar-nav{
+        letter-spacing: .1rem;
+        font-size: 0.7em;  
+    }
+}
+
+@media (max-width: 575px){
+    .navbar-brand{
+        margin-left: 25px; 
+        font-size: 1.7em;
+    }
+
+    .navbar-nav{
+        border-top-width: 1px; 
+        border-top-style: solid; 
+        border-top-color: #191970; 
+        margin-top: 15px;
+        font-size: 0.9em;   
+    }
+
+    .nav-item{
+        text-align: center;
+        margin: 2px 0px;
+    }
+
+    .nav-link:hover{
+        padding-bottom: 8px; 
+        border: none; 
+        opacity: 1;
+    }
+
+}
+.corpo{
+    width: 100%;
+    vertical-align: middle;
+    background-color: #d8d8d8;
+    height: 800px;
+    padding: 50px;
+    
+    
+    }
+
+    #rectangle{
+        margin: 0 auto;
+        width:100%;
+        height:50px;
+        background: white;
+        position: relative;
+        top: 80px;
+        -webkit-box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.3);
+        -moz-box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.3);
+        box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.3);
+    
+    
+    }
+    
+      .rectangle_chanfro2 {
+        width: 120px;
+        height: 40px;
+        display: block;
+        background-color: #d8d8d8 ;
+        transform: rotate(120deg);
+        margin: 0 auto;
+        padding: 0;
+        margin-left: -50px;
+    
+    
+      }  
+
+        
+      @media (max-width: 1140px) {
+
+        .corpo{
+
+        width: 100%;
+        }
+        #rectangle {
+            width: 100%;
+          
+        }
+
+        .rectangle_chanfro2{
+
+            width: 120px;
+            height: 40px;
+ 
+
+        }
+    }
+
+    @media (max-width: 385px) {
+
+        .corpo{
+            width: 100%;
+
+
+
+        }
+        #rectangle {
+            width: 100%;
+          
+        }
+
+        .rectangle_chanfro2{
+
+            width: 120px;
+            height: 40px;
+            align-self: flex-start;
+ 
+
+        }
+    }
+
+      footer {
+        padding: 10px 0px;
+        margin: 0px;
+        background: white;
+        width: 100%;
+        padding: 10px 0px; 
+        margin: 0px; 
+        }
+        
+        
+        
+        #duvidas {
+            color: #1b91c1;
+            font-size: 34px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bold;
+            padding: 20px;
+            letter-spacing: 5px;
+        }
+        
+        #especialistas {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 27px;
+            font-weight: 600;
+        }
+        
+        #email {
+            color:#1b91c1;
+            font-size: 27px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        #endereco {
+            color: #1b91c1;
+            font-size: 27px;
+            font-family: Arial, Helvetica, sans-serif;
+            vertical-align: middle;
+            padding-left: 10px;
+        }
+        
+        #telefone {
+            color: #1b91c1;
+            font-size: 27px;
+            font-family: Arial, Helvetica, sans-serif;
+            vertical-align: middle;
+            padding-left: 10px;
+        }
+        
+        #imgMapa {
+            width: 20px;
+            vertical-align: middle
+        }
+        
+        #imgTelefone {
+            width: 20px;
+            vertical-align: middle
+        }
+        
+        #balao {
+            width: 80px;
+            vertical-align: middle
+        }
+        
+        .listStyle {
+            list-style: none;
+        }
+        
+        .flex {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
+        
+        .column {
+            margin-left: 30px;
+            margin-right: 30px;
+        }
+        
+        .text-align {
+            text-align: center;
+        }
+        
+        @media (max-width: 1140px) {
+            .flex {
+                display: flex;
+                flex-wrap: wrap;
+                text-align: center;
+            }
+        
+            .resp1 {
+                padding-left: 2px;
+                padding-top: 50px;
+            }
+        
+            .resp2 {
+                padding-left: 2px;
+            }
+        }
+        
+        @media (max-width: 385px) {
+            #email {
+                font-size: 20px;
+            }
+        
+            #telefone {
+                font-size: 20px;
+            }
+        
+            #endereco {
+                font-size: 20px;
+            }
+        
+            #especialistas {
+                font-size: 20px;
+            }
+            
+            .resp3 {
+                padding-right: 25px;
+            }
+        }
+        
+        
+        
+
+
