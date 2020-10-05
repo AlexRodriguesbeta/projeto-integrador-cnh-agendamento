@@ -100,7 +100,11 @@
     vertical-align: middle;
     background-color: #d8d8d8;
     height: 800px;
-    padding: 50px;
+    margin-top: 50px; 
+    padding: 0 50px;
+
+
+    
     
     
     }
@@ -112,68 +116,50 @@
         background: white;
         position: relative;
         top: 80px;
-        -webkit-box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.3);
-        -moz-box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.3);
-        box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.3);
+        clip-path: polygon(3% 0%, 100% 0%, 100% 99%, 0% 100%);
+
     
     
     }
     
-      .rectangle_chanfro2 {
-        width: 120px;
-        height: 40px;
-        display: block;
-        background-color: #d8d8d8 ;
-        transform: rotate(120deg);
-        margin: 0 auto;
-        padding: 0;
-        margin-left: -50px;
-    
-    
-      }  
+     
+.sombra{
 
+    filter: drop-shadow(0px 5px 5px rgba(0,0,0,0.34));
+}
         
       @media (max-width: 1140px) {
 
         .corpo{
 
         width: 100%;
+        padding: 0 50px;
+
         }
         #rectangle {
             width: 100%;
+         
           
-        }
-
-        .rectangle_chanfro2{
-
-            width: 120px;
-            height: 40px;
- 
-
         }
     }
 
-    @media (max-width: 385px) {
+    @media (max-width: 625px) {
 
         .corpo{
+
             width: 100%;
-
-
-
-        }
+            padding: 0px 0px;
+    
+    
+    
+            }
         #rectangle {
             width: 100%;
+            margin: 0 auto;
+            padding: 0px , 0px;
           
         }
 
-        .rectangle_chanfro2{
-
-            width: 120px;
-            height: 40px;
-            align-self: flex-start;
- 
-
-        }
     }
 
       footer {
