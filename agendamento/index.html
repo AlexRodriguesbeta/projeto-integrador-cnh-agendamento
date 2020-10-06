@@ -36,11 +36,53 @@
 
     <section class="corpo">
         <div class="sombra">
-        <div id="rectangle"></div>
-    </div>
-    </div>
+            <div id="rectangle">
+                <p>
+                    <select name="comboUF" id="comboUF" class = "combobox">
+                        <option value="UF" hidden selected>UF</option>
+                        <option value="MG">MG</option>
+                        <option value="RJ">RJ</option>
+                        <option value="SP">SP</option>
+                      </select>
+                </p>
+                <p>
+                    <select name="comboMunicipio" id="comboMunicipio" class = "combobox">
+                        <option value="Municipio" hidden selected>Município</option>
+                        <option value="Belo Horizonte">Belo Horizonte</option>
+                        <option value="Rio de Janeiro">Rio de Janeiro</option>
+                        <option value="São Paulo">São Paulo</option>
+                      </select>
+                </p>
+                <p>
+                    <select name="comboCarro" id="comboCarro" class = "combobox">
+                        <option value="Carro" hidden selected>Carro</option>
+                        <option value="Chevrolet Prisma">Chevrolet Prisma</option>
+                        <option value="Hyundai HB20">Hyundai HB20</option>
+                        <option value="Volksvagen Gol5">Volksvagen Gol5</option>
+                      </select>
+                </p>
+                <p>
+                    <select name="comboTempoCarteira" id="comboTempoCarteira" class = "combobox">
+                        <option value="TempoCarteira" hidden selected>Tempo de Carteira</option>
+                        <option value="5">5 anos</option>
+                        <option value="8">8 anos</option>
+                        <option value="15">15 anos</option>
+                      </select>
+                </p>
+            </div>
+        </div>
+
 
     </section>
+
+    
+
+    <div class="encapsulamento-carteira posicao" style="background-color: #d8d8d8;">
+    
+    </div>
+   
+
+
     <footer>
         <section class="flex">
             <div class="column text-align">
@@ -69,9 +111,9 @@
             </div>
         </section>  
     </footer>
-    
+    <script src="js/scripts.js"></script>
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script> 
-    <script src="js/scripts.js"></script>
+   
 </body>
 </html>
