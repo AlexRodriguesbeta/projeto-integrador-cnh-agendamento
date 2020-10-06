@@ -52,8 +52,8 @@ async function desenharCarteiras(info) {
         `
         <div class="carteira">
         <!-- <div class="referencia"></div> -->
-        <div class="header-fundo-carteira"></div>
         <div class="header-carteira">
+        <div class="header-fundo-carteira"></div>
             <span><span>UF: </span><span class="uf" id="uf${i}">SP</span></span>
             <span class="header-direita-carteira"><span>MUNICÍPIO: </span><span class="municipio" id="municipio${i}">São José dos Campos</span></span> 
         </div>

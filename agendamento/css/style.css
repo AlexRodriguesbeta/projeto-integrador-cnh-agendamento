@@ -334,6 +334,8 @@
 /* Carteira abaixo */
 
 .carteira {
+    background-color: white;
+    z-index:1;
     font-family: 'Myriad Pro Regular', sans-serif;
     font-style: normal;
     background-image: url('../img/Background\ Carteira.png');
@@ -596,7 +598,7 @@ td {
 
     .header-fundo-carteira {
         height: 57px;
-        width: 431px;
+        width: 430px;
     }
 
     .header-carteira {
