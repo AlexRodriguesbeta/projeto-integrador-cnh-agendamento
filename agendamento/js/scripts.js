@@ -1,6 +1,7 @@
 // const url = 'https://sheet.best/api/sheets/bbd84ec6-c651-495d-b922-c3c9afcbc8c1';
 
 //Para teste, rode um json server com o arquivo DB_Carteira.json dentro da pasta js
+
 const url = 'http://localhost:3000/data';
 
 //Retorna todos os dados da API
@@ -115,7 +116,7 @@ async function desenharCarteiras(info) {
             </div>
         </div>
         </div>     
-        `
+        `;
         //Desenha a carteira vazia
         document.querySelector('.encapsulamento-carteira').innerHTML += estruturaCarteira;
         //Insere os dados na carteira vazia
@@ -139,8 +140,8 @@ async function desenharCarteiras(info) {
                 propriedadeDOM.innerText = pessoa[propriedade];
             };
           });
-        i++
-    })
+        i++;
+    });
 }
 
 async function teste() {
@@ -150,3 +151,61 @@ async function teste() {
 }
 
 teste();
+
+function escreveMunicipiosPorUF() {
+    //Pegando a UF que foi escolhida
+    let siglaUF = document.getElementById('comboUF').value;
+    //Pegando a lista de municípios
+    let municipiosHTML = document.getElementById('comboMunicipio');
+    //Zerando a lista de municípios no HTML toda vez que a função é chamada
+    municipiosHTML.innerHTML =
+    `
+    <option value="Municipio" hidden selected>Município</option>
+    `;
+    let municipios = [];
+    let estruturaMunicipio = "";
+
+    if (siglaUF == 'MG') {
+        municipios = [
+                        'Barbacena',
+                        'Belo Horizonte',
+                        'Poços de Caldas',
+                        'Uberaba',
+                        'Uberlândia'    
+                    ];
+    } else if (siglaUF == 'RJ') {
+        municipios = [
+                        'Angra dos Reis',
+                        'Araruama',
+                        'Búzios',
+                        'Duque de Caxias',
+                        'Macaé',
+                        'Niterói',
+                        'Rio Bonito',
+                        'Rio das Ostras',
+                        'Rio de Janeiro',
+                        'São Fidélis'          
+                    ];
+      } else if (siglaUF == 'SP') {
+        municipios = [
+                        'Atibaia',
+                        'Bauru',
+                        'Botucatu',
+                        'Cotia',
+                        'Guarulhos',
+                        'Limeira',
+                        'Rio Claro',
+                        'São Carlos',
+                        'São José dos Campos',
+                        'São Paulo'      
+                    ];
+      }
+  
+      municipios.forEach(municipio => {
+        let estruturaMunicipio =
+        `
+        <option value="${municipio}">${municipio}</option>
+        `;
+        municipiosHTML.innerHTML += estruturaMunicipio;  
+      });
+};

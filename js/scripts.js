@@ -1,14 +1,25 @@
-let url = 'https://api.sheety.co/2cb3b4e06ae64af40d9e60b2e69e5b3b/baseExemploSiteCnh/planilha1';
-fetch(url)
-.then((response) => response.json())
-.then(json => {
-  // Do something with the data
-  console.log(json.planilha1); 
-});
+// let url = 'https://api.sheety.co/2cb3b4e06ae64af40d9e60b2e69e5b3b/baseExemploSiteCnh/planilha1';
+// fetch(url)
+// .then((response) => response.json())
+// .then(json => {
+//   // Do something with the data
+//   console.log(json.planilha1); 
+// });
 
+import BaseDados from '../agendamento/js/scripts'
 
-function retornaMunicipiosPorUF(siglaUF) { 
-  
+function escreveMunicipiosPorUF() {
+  console.log("teste");
+  //Pegando a UF que foi escolhida
+  let siglaUF = document.getElementById('comboUF').value;
+  //Pegando a lista de municípios
+  let municipiosHTML = document.getElementById('comboMunicipio');
+  //Zerando a lista de municípios no HTML toda vez que a função é chamada
+  municipiosHTML.innerHTML =
+  `
+  <option value="Municipio" hidden selected>Município</option>
+  `
+
   if (siglaUF == 'MG') {
     const municipios = ['Barbacena',
                         'Belo Horizonte',
@@ -41,8 +52,15 @@ function retornaMunicipiosPorUF(siglaUF) {
                           'São Paulo'      
                          ];
     }
-    
-  return municipios; 
+
+    municipios.array.forEach(municipio => {
+      let estruturaMunicipio =
+      `
+      <option value="${municipio}">${municipio}</option>
+      `
+      municipiosHTML.innerHTML += estruturaMunicipio;
+      
+    });
 };
 
 
