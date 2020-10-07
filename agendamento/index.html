@@ -58,13 +58,28 @@
                         <option value="Volksvagen Gol5">Volksvagen Gol5</option>
                     </select>
                 </p>
-                <p>
+                <!-- <p>
                     <select name="comboTempoCarteira" id="comboTempoCarteira" class = "combobox">
                         <option value="TempoCarteira" hidden selected>Tempo de Carteira</option>
                         <option value="5">5 anos</option>
                         <option value="8">8 anos</option>
                         <option value="15">15 anos</option>
                     </select>
+                </p> -->
+
+                <p class="qty" id="anoCarro">
+                    <span>Ano:</span>
+                    <span class="minusCarro bg-dark">-</span>
+                    <input type="number" class="anoCarro" name="anoCarro" value="2000">
+                    <span class="plusCarro bg-dark">+</span>
+                </p>
+
+                <p class="qty" id="tempoCarteira">
+                    <span>Experiência:</span>
+                    <span class="minusExp bg-dark">-</span>
+                    <input type="number" class="tempoCarteira" name="exp" value="0">
+                    <span class="plusExp bg-dark">+</span>
+                    <span>(anos)</span>
                 </p>
             </div>
         </div>

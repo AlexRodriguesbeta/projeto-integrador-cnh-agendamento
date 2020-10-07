@@ -209,3 +209,36 @@ function escreveMunicipiosPorUF() {
         municipiosHTML.innerHTML += estruturaMunicipio;  
       });
 };
+
+let contadorCarteira = document.querySelector('.tempoCarteira');
+let contadorCarro = document.querySelector('.anoCarro');
+
+let maisCarro = document.querySelector('.plusCarro');
+let menosCarro = document.querySelector('.minusCarro');
+
+let maisCarteira = document.querySelector('.plusExp');
+let menosCarteira = document.querySelector('.minusExp');
+
+maisCarro.addEventListener('click', () => {
+    if(parseInt(contadorCarro.value) < 2020) {
+        contadorCarro.value = (parseInt(contadorCarro.value) + 1).toString();
+    }
+})
+
+menosCarro.addEventListener('click', () => {
+    if(parseInt(contadorCarro.value) > 2000) {
+        contadorCarro.value = (parseInt(contadorCarro.value) - 1).toString();
+    }
+});
+
+maisCarteira.addEventListener('click', () => {
+    if(parseInt(contadorCarteira.value) < 50) {
+        contadorCarteira.value = (parseInt(contadorCarteira.value) + 1).toString();
+    }
+})
+
+menosCarteira.addEventListener('click', () => {
+    if(parseInt(contadorCarteira.value) > 0) {
+        contadorCarteira.value = (parseInt(contadorCarteira.value) - 1).toString();
+    }
+});
