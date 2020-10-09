@@ -1,0 +1,413 @@
+@import url('../fonts/Myriad\ Pro\ Regular.otf');
+
+/*  Nav */
+.navbar{
+    padding: 25px 0px;  
+    background-color: rgb(1,163,210); 
+    top:0;
+    left:0;
+}
+
+.navbar-brand{
+    font-size: 1.8em;
+    font-family: 'Montserrat', sans-serif;
+    opacity: 0.8; 
+}
+
+.navbar-brand:hover{
+    color: #fff; 
+    opacity: 1;
+}
+
+.nav-item{
+    margin: 0px 15px;
+} 
+
+.nav-link{
+    font-family: 'Segoe UI Bold';
+    font-size: 1.3em;
+    letter-spacing: .1rem;
+    color: #fff !important; 
+    opacity: 0.8;
+}
+
+.nav-link:hover{
+    padding-bottom: 3px; 
+    border-bottom-width: 3px; 
+    border-bottom-style: solid; 
+    border-bottom-color: #191970; 
+    opacity: 1;
+    color: #fff; 
+}
+
+.navbar-toggler-icon{
+    border: 1px solid #fff;
+}
+
+@media (max-width: 995px){
+    .navbar{
+        padding: 15px 0px;  
+    }
+    
+    .nav-item{
+        margin: 0px 5px;
+    } 
+
+    .container{
+        padding: 0px 2px;
+    }  
+}
+
+@media (max-width: 767px){
+    .navbar-brand{
+        font-size: 1.3em; 
+    }
+    
+    .navbar-nav{
+        letter-spacing: .1rem;
+        font-size: 0.7em;  
+    }
+}
+
+@media (max-width: 575px){
+    .navbar-brand{
+        margin-left: 25px; 
+        font-size: 1.7em;
+    }
+
+    .navbar-nav{
+        border-top-width: 1px; 
+        border-top-style: solid; 
+        border-top-color: #191970; 
+        margin-top: 15px;
+        font-size: 0.9em;   
+    }
+
+    .nav-item{
+        text-align: center;
+        margin: 2px 0px;
+    }
+
+    .nav-link:hover{
+        padding-bottom: 8px; 
+        border: none; 
+        opacity: 1;
+    }
+
+}
+/*  /Nav */
+
+/* Carteira abaixo */
+
+.carteira {
+    font-family: 'Myriad Pro Regular', sans-serif;
+    font-style: normal;
+    background-image: url('../img/Background\ Carteira.png');
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* width: 289px; */
+    width: 90%;
+    margin: 5px auto;
+    border: solid 1px black;
+    border-radius: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.header-fundo-carteira {
+    width: 89.5%;
+    box-sizing: border-box;
+    position: absolute;
+    height: 6%;
+    background-color: rgb(16,172,213);
+    z-index: -1;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+}
+
+.referencia {
+    background-image: url('E:/OneDrive/Área de Trabalho/Digital House/PI/Repositório/projeto-integrador-cnh-agendamento/provisórios/img/layout card.png');
+    background-size: cover;
+    opacity: 0.5;
+    width: 289px;
+    margin: 0 auto;
+    border: solid 1px black;
+    border-radius: 10px;
+    height: 27vh;
+    box-sizing: border-box;
+    z-index:-1;
+    position: absolute;
+}
+
+.encapsulamento-carteira {
+    margin: 0 0;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-evenly;
+    box-sizing: border-box;
+}
+
+.header-carteira {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 12px;
+    color: black;
+    box-sizing: border-box;
+    width: 100%;
+    height: 40px;
+}
+
+#uf, #municipio {
+    font-weight: bold;
+}
+
+.header-direita-carteira {
+    float: right;
+}
+
+.foto-carteira {
+    width:90%;
+    margin: 8px 0 0 8px;
+    box-sizing: border-box;
+}
+
+.contato-carteira {
+    width: 35%;
+    box-sizing: border-box;
+}
+
+.botao-contato-carteira {
+    border-radius: 0;
+    font-size: 9px;
+    width: 79%;
+    padding: 2px;
+    line-height: 1;
+    display: block;
+    margin: 7px 7px 0 14px;
+    border-color: rgb(1,163,210);
+    background-color: rgb(1,163,210);
+    border-radius: 1px;
+    box-sizing: border-box;
+}
+
+.modelo {
+    width: 286%;
+}
+
+.corpo-carteira {
+    display: flex;
+    flex-wrap: wrap;
+    height: 78%;
+}
+
+.informacoes-carteira {
+    width: 65%;
+    font-size: 12.5px;
+}
+
+#nome-usuario {
+    margin: 4px 0 0 1px;
+}
+
+.detalhes-carteira {
+    margin: 3px 0 0 1px;
+    font-size: 9px;
+}
+
+.disponibilidade-tabela {
+    border-collapse: separate;
+    border-spacing: 4px;
+    font-size: 6.5px;
+    padding: 0;
+    margin: 0px 0px 0 0px;
+    box-sizing: border-box;
+}
+
+.disponibilidade-tabela th {
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.disponibilidade-tabela td {
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.indisponivel {
+    opacity: 0.3;
+}
+
+td img {
+    width: 10px;
+}
+
+td {
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.valor-carteira {
+    font-size: 6px;
+    text-align: center;
+    margin: 2px 0 0 5px;
+}
+
+.valor-carteira span {
+    font-size: 8px;
+}
+
+#municipio {
+    text-transform: uppercase;
+}
+
+.disponibilidade-texto {
+    font-weight: 700;
+    font-style: normal;
+    font-size: 11px;
+    margin: 1px auto;
+    text-align: center;
+}
+
+@media (min-width:375px) {
+
+    .carteira {
+        height: 198px;
+        width: 326.25px;
+    }
+
+    .referencia {
+        width: 326px;
+        height: 197px;    
+    }
+
+    .header-fundo-carteira {
+        height: 43px;
+        width: 324.3px;
+    }
+
+    .header-carteira {
+        font-size: 14px;
+        height: 22%;
+    }
+
+    .foto-carteira {
+        width: 88%;
+        margin-top: 12px;
+        margin-left: 10px;
+    }
+
+    .botao-contato-carteira {
+        font-size: 10px;
+        margin-top: 8px;
+        margin-left: 15px;
+        width: 80%;
+    }
+
+    .informacoes-carteira {
+        font-size: 14px;
+    }
+
+    .detalhes-carteira {
+        margin-top: 3px;
+        font-size: 10px;
+    }
+
+    .disponibilidade-texto {
+        font-size: 12px;
+    }
+
+    .disponibilidade-tabela {
+        font-size: 7.5px;
+    }
+
+    .valor-carteira {
+        font-size: 7px;
+        margin-top: 4px;
+    }
+
+    .valor-carteira span {
+        font-size: 9px;
+    }
+
+    #nome-usuario {
+        margin-top: 6px;
+    }
+
+    td img {
+        width: 12px;
+    }
+
+}
+
+@media (min-width:1024px) {
+
+    .carteira {
+        height: 261px;
+        width: 432px;
+    }
+
+    .referencia {
+        height: 261px;
+        width: 432px;  
+    }
+
+    .header-fundo-carteira {
+        height: 57px;
+        width: 431px;
+    }
+
+    .header-carteira {
+        font-size: 18px;
+    }
+
+    .foto-carteira {
+        width: 89%;
+        margin-top: 15px;
+        margin-left: 13px;
+    }
+
+    .botao-contato-carteira {
+        font-size: 13px;
+        margin-top: 12px;
+        margin-left: 20px;
+    }
+
+    .valor-carteira {
+        font-size: 9px;
+        margin-top: 6px;
+    }
+
+    .valor-carteira span {
+        font-size: 11px;
+    }
+
+    .informacoes-carteira {
+        font-size: 18px;
+    }
+
+    #nome-usuario {
+        margin-top: 9px;
+    }
+
+    .detalhes-carteira {
+        font-size: 14px;
+    }
+
+    .disponibilidade-texto {
+        font-size: 15px;
+        margin: 2px auto;
+    }
+
+    .disponibilidade-tabela {
+        font-size: 10px;
+    }
+
+    td img {
+        padding-top: 3px;
+        width: 16px;
+    }
+
+}

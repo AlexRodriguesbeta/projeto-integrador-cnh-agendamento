@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+/* Valores */
+
+:root{
+  --cor-background: #232935;
+  --cor-primaria: #2BAEE4;
+}
+
+#valores{
+  height: 100%;
+  width: 100%;
+  background-color: var(--cor-background);
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+}
+
+.valores-container, #content-container{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.valores-container{
+  padding-top: 30px;
+}
+
+.cards-valores{
+  padding: 0 15px;
+  display: none;
+}
+
+.cards-valores:hover{
+  cursor: pointer;
+  transform: scale(1.05);
+  transition-duration: 500ms;
+}
+
+.cards-valores, .icone-valores{
+  width: 200px;
+}
+
+.icones{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icone-valores{
+  width: 140px;
+}
+
+.titulo-valores{
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--cor-primaria);
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.texto-valores{
+  text-align: center;
+  color: #fff;
+  font-size: clamp(0.9rem, 1.3vw, 1.1rem);
+  line-height: 2;
+}
+
+#carousel-container{
+  width: 200px;
+  height: 100vh;
+  position: relative;
+  margin: 100px 0 0;
+}
+
+#carousel-container > .carousel-hidden:first-child{
+  overflow: hidden;
+  max-width: 100%;
+  margin: 0;
+}
+
+#carousel{
+  position: relative;
+  width: 2000px;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+.animate{
+  -webkit-transition-duration: .5s;
+  -moz-transition-duration: .5s;
+  -o-transition-duration: .5s;
+  transition-duration: .5s;
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  transition-property: transform;
+}
+
+.slide {
+  list-style: none;
+  position: relative;
+  float: left;
+  transform: translateX(-200px);
+}
+
+.icons{
+  width: 200px;
+}
+
+.icons .texto-valores{
+  font-size: clamp(1.17rem, 1.5vw, 1.2rem);
+}
+
+#control-left, #control-right{
+  height: 50vh;
+}
+
+#prev{
+  float: left;
+}
+
+#next{
+  float: right;
+}
+
+#prev, #next{
+  padding-top: 40vh;
+  cursor: pointer;
+  opacity: 0.4;
+  font-size: 30px;
+}
+
+#prev:hover, #next:hover {
+  opacity: 1;
+}
+
+#prev, #next{
+  color: white;
+}
+
+@media(max-width: 420px){
+
+  #valores-hidden{
+    height: 55px;
+  }
+
+  #valores{
+    height: 100%;
+  }
+
+  #carousel-container {
+    margin: 50px 0 0;
+  }
+
+  .icons .texto-valores{
+    font-size: 15px;
+  }
+
+}
+
+@media(max-width: 516px){
+
+  #valores{
+    height: 100%;
+  }
+
+  .valores-container{
+    display: none;
+  }
+
+}
+
+@media(min-width: 516px){
+
+  #valores-hidden{
+    height: 55px;
+  }
+
+  #content-container{
+    display: none;
+  }
+
+  .cards-valores{
+    display: block;
+  }
+
+  .titulo-valores{
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+}
+
+@media(min-width: 516px) and (max-width: 768px){
+
+  #valores{
+    height: 100%;
+  }
+
+  .valores-container{
+    flex-wrap: wrap;
+    margin-right: 10%;
+    margin-left: 10%;
+  }
+
+  .cards-valores{
+    width: 40%;
+  }
+
+}
+
+@media(min-width: 576px) and (max-width: 768px){
+
+  #valores{
+    height: 100%;
+  }
+  
+  .texto-valores{
+    font-size: clamp(1rem, 2.5vw, 1.4rem);
+  }
+
+}
+
+@media(min-width: 769px){
+  
+  #valores-hidden{
+    height: 65px;
+  }
+
+}
+
+@media (min-width: 769px) and (max-width: 992px){
+
+  .texto-valores {
+    font-size: clamp(1rem, 1.7vw, 1.7rem);
+  }
+
+}
+
+@media(min-width: 992px){
+
+  .texto-valores{
+    font-size: clamp(1rem, 1.4vw, 1.2rem);
+  }
+
+}
+
+@media(min-width: 992px) and (max-width: 1200px){
+
+  .cards-valores{
+    padding: 0;
+  }
+
+}
+
+@media(min-width: 992px){
+
+  #valores-hidden{
+    height: 86px;
+  }
+
+}
+
+@media(min-width: 1200px){
+
+  .cards-valores{
+    width: 250px;
+    padding: 0;
+  }
+
+}
+
+@media(max-height: 768px){
+
+  .cards-valores{
+    height: 85vh;
+  }
+
+}
+
+
+@media(min-height: 852px) and (min-width: 1024px){
+
+  #valores{
+    height: 64vh;
+  }
+
+}
+
+@media(min-height: 1024px) and (min-width: 992px){
+
+  .texto-valores {
+    font-size: clamp(1rem, 1.6vw, 1.4rem);
+  }
+
+}
+
+@media(min-height: 1024px) and (min-width: 1024px){
+
+  .texto-valores {
+    font-size: clamp(1rem, 2vw, 1.4rem);
+  }
+
+}
