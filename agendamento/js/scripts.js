@@ -1,8 +1,8 @@
-// const url = 'https://sheet.best/api/sheets/23704868-8eff-4e28-a15f-799061419c17';
+ const url = 'https://sheet.best/api/sheets/23704868-8eff-4e28-a15f-799061419c17';
 
 //Para teste, rode um json server com o arquivo DB_Carteira.json dentro da pasta js
 
-const url = 'http://localhost:3000/data';
+//const url = 'http://localhost:3000/data';
 
 //Retorna todos os dados da API
 //async function buscarInfo() {
@@ -286,7 +286,12 @@ async function filter(){
 
 
 async function buscarInfo(urlF) {
+    console.log(urlF);
     const response = await fetch(url+urlF);
     const result = await response.json();
+    
+    if (this.result = ' '){
+        alert("Sem resultados para a busca...");
+    }
     return result;
 } 
