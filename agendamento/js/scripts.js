@@ -5,11 +5,11 @@
 const url = 'http://localhost:3000/data';
 
 //Retorna todos os dados da API
-async function buscarInfo() {
-    const response = await fetch(url);
-    const result = await response.json();
-    return result;
-}
+//async function buscarInfo() {
+   // const response = await fetch(url);
+    //const result = await response.json();
+    //return result;
+//}
 
 //Retorna somente um dos dados da API
 async function buscarInfoLinha(row) {
@@ -246,3 +246,47 @@ menosCarteira.addEventListener('click', () => {
         contadorCarteira.value = (parseInt(contadorCarteira.value) - 1).toString();
     }
 });
+
+//  função filtrar versão 1
+
+async function filter(){
+    let urlFiltro ='/tabs/BaseCNH/search?'; 
+    let uf = document.getElementById('comboUF'); 
+    let municipio = document.getElementById('comboMunicipio'); 
+    let carro = document.getElementById('comboCarro'); 
+    let ano = document.querySelector('input[name=anoCarro]');
+    let experiencia = document.querySelector('input[name=exp]');
+
+    if(uf.value !== 'UF'){
+        urlFiltro += 'uf='+uf.value; 
+    }
+
+    if(municipio.value !== "Municipio"){
+        urlFiltro += '&municipio='+municipio.value; 
+    }
+
+    if(carro.value !== "Carro"){
+        urlFiltro += '&marca-carro='+carro.value; 
+    }
+
+    if(ano.value !== "2000"){
+        urlFiltro += '&ano-carro='+ano.value; 
+    }
+
+    if(experiencia.value !== "0"){
+        urlFiltro += '&experiencia='+experiencia.value;
+    }
+     
+    const dados = await buscarInfo(urlFiltro);
+    console.log(dados);
+    desenharCarteiras(dados);
+    
+}
+
+
+
+async function buscarInfo(urlF) {
+    const response = await fetch(url+urlF);
+    const result = await response.json();
+    return result;
+} 
