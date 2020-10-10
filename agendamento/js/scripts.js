@@ -1,4 +1,4 @@
-// const url = 'https://sheet.best/api/sheets/bbd84ec6-c651-495d-b922-c3c9afcbc8c1';
+// const url = 'https://sheet.best/api/sheets/23704868-8eff-4e28-a15f-799061419c17';
 
 //Para teste, rode um json server com o arquivo DB_Carteira.json dentro da pasta js
 
@@ -46,6 +46,10 @@ async function buscarLinhasAleatorias(quantidade) {
 async function desenharCarteiras(info) {
     let estruturaCarteira = "";
     let i=0;
+    let encapsulamentoCarteira = document.querySelector('.encapsulamento-carteira');
+
+    //Limpando todas as carteiras
+    encapsulamentoCarteira.innerHTML = "";
 
     info.forEach(pessoa => {
         //Seta a estrutura da carteira com o valor de 'i' ao fim de cada id a ser populada
@@ -118,7 +122,7 @@ async function desenharCarteiras(info) {
         </div>     
         `;
         //Desenha a carteira vazia
-        document.querySelector('.encapsulamento-carteira').innerHTML += estruturaCarteira;
+        encapsulamentoCarteira.innerHTML += estruturaCarteira;
         //Insere os dados na carteira vazia
         Object.getOwnPropertyNames(pessoa).forEach(propriedade => {
             //propriedade = nome da propriedade (ex: id, telefone, nome-usuario)
