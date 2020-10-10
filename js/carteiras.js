@@ -45,6 +45,10 @@ async function buscarLinhasAleatorias(quantidade) {
 async function desenharCarteiras(info) {
   let estruturaCarteira = "";
   let i = 0;
+  let encapsulamentoCarteira = document.querySelector('.encapsulamento-carteira');
+
+  //Limpando todas as carteiras
+  encapsulamentoCarteira.innerHTML = "";
 
   info.forEach(pessoa => {
     //Seta a estrutura da carteira com o valor de 'i' ao fim de cada id a ser populada
@@ -117,7 +121,7 @@ async function desenharCarteiras(info) {
         </div>     
         `
     //Desenha a carteira vazia
-    document.querySelector('.encapsulamento-carteira').innerHTML += estruturaCarteira;
+    encapsulamentoCarteira.innerHTML += estruturaCarteira;
     //Insere os dados na carteira vazia
     Object.getOwnPropertyNames(pessoa).forEach(propriedade => {
       //propriedade = nome da propriedade (ex: id, telefone, nome-usuario)
