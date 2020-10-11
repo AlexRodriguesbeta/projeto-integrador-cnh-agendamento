@@ -2,14 +2,14 @@
 
 //Para teste, rode um json server com o arquivo DB_Carteira.json dentro da pasta js
 
-//const url = 'http://localhost:3000/data';
+// const url = 'http://localhost:3000/data';
 
 //Retorna todos os dados da API
-//async function buscarInfo() {
-   // const response = await fetch(url);
-    //const result = await response.json();
-    //return result;
-//}
+async function buscarInfo() {
+   const response = await fetch(url);
+    const result = await response.json();
+    return result;
+}
 
 //Retorna somente um dos dados da API
 async function buscarInfoLinha(row) {
@@ -148,13 +148,13 @@ async function desenharCarteiras(info) {
     });
 }
 
-async function teste() {
+async function desenhaTudo() {
     const dados = await buscarInfo();
     console.log(dados);
     desenharCarteiras(dados);
 }
 
-teste();
+desenhaTudo(); //Chamada ao carregar a página para desenhar tudo
 
 function escreveMunicipiosPorUF() {
     //Pegando a UF que foi escolhida
@@ -247,51 +247,78 @@ menosCarteira.addEventListener('click', () => {
     }
 });
 
-//  função filtrar versão 1
+//  função filtrar versão 2
 
 async function filter(){
-    let urlFiltro ='/tabs/BaseCNH/search?'; 
+    let urlFiltro = url + '/tabs/BaseCNH/search?'; 
     let uf = document.getElementById('comboUF'); 
     let municipio = document.getElementById('comboMunicipio'); 
     let carro = document.getElementById('comboCarro'); 
     let ano = document.querySelector('input[name=anoCarro]');
     let experiencia = document.querySelector('input[name=exp]');
+    let numeroFiltros = 0;
+    let dados = [];
+    let dadosNumericos = [];
 
+    //Como é o primeiro valor, não precisamos fazer o check do &
     if(uf.value !== 'UF'){
-        urlFiltro += 'uf='+uf.value; 
+        urlFiltro += 'uf='+uf.value;
+        numeroFiltros++; 
     }
 
     if(municipio.value !== "Municipio"){
-        urlFiltro += '&municipio='+municipio.value; 
+        if(numeroFiltros > 0) urlFiltro += '&';
+        urlFiltro += 'municipio='+municipio.value;
+        numeroFiltros++; 
     }
 
     if(carro.value !== "Carro"){
-        urlFiltro += '&marca-carro='+carro.value; 
+        if(numeroFiltros > 0) urlFiltro += '&';
+        urlFiltro += 'marca-carro='+carro.value;
+        numeroFiltros++; 
     }
 
-    if(ano.value !== "2000"){
-        urlFiltro += '&ano-carro='+ano.value; 
+    if(numeroFiltros === 0) {
+        //Se não houver filtros, buscamos a url original que retorna a API inteira
+        dados = await buscarInfo(url);    
+    } else {
+        dados = await buscarInfoFiltrada(urlFiltro);
     }
 
-    if(experiencia.value !== "0"){
-        urlFiltro += '&experiencia='+experiencia.value;
-    }
-     
-    const dados = await buscarInfo(urlFiltro);
-    console.log(dados);
-    desenharCarteiras(dados);
     
+    //Só tentamos filtrar numericamente se o ano do carro for maior que 2000,
+    //ou se a experiência for maior que 0
+    if (parseInt(ano.value) > 2000 || parseInt(experiencia.value) > 0) {
+        dados.forEach(pessoa => {
+            if(parseInt(pessoa.experiencia) >= experiencia.value
+            && parseInt(pessoa["ano-carro"]) >= ano.value) {
+                //Se a pessoa atende aos requisitos de ambos os filtros (maior ou igual ao valor especificado),
+                //ela é copiada para outra array
+                dadosNumericos.push(pessoa);
+            }
+        })
+        
+        console.log(dadosNumericos);
+        desenharCarteiras(dadosNumericos);
+        if(dadosNumericos.length === 0) {
+            alert("Sem resultados para a busca...");
+        }
+        //Se não houver filtros numéricos, ignoramos e desenhamos os dados que já tínhamos
+    } else {
+        console.log("Número de filtros = " + numeroFiltros)
+        console.log(urlFiltro);
+        console.log(dados);
+        desenharCarteiras(dados);
+        if(dados.length === 0) {
+            alert("Sem resultados para a busca...");
+        }
+    }
 }
 
 
 
-async function buscarInfo(urlF) {
-    console.log(urlF);
-    const response = await fetch(url+urlF);
+async function buscarInfoFiltrada(urlFiltro) {
+    const response = await fetch(urlFiltro);
     const result = await response.json();
-    
-    if (this.result = ' '){
-        alert("Sem resultados para a busca...");
-    }
     return result;
 } 
