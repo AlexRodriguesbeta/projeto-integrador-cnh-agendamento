@@ -162,8 +162,6 @@ async function plotarCards() {
     //garantindo que o card não será repetido
     if (!cards.includes(card) || cards == []) {
       cards.push(card);
-      // let cardAleatorio = document.querySelector(`.card-${i + 1}`);
-      // cardAleatorio.innerHTML = desenharCarteiras(card);
     } else {
       i--;
     }
@@ -177,12 +175,20 @@ async function plotarCards() {
     desenharCarteiras(cards);
     //senão, será mostrado apenas 2 cards
   } else {
-    desenharCarteiras(cards);
-    let carteiras = [];
-    let carteira = document.getElementsByClassName('carteira');
-    carteiras.push(carteira[0]);
-    carteiras.push(carteira[1]);
 
+    let carteiras = [];
+    let carteira = new Object();
+
+    for (let i = 0; i < 2; i++) {
+      let number = Math.floor(Math.random() * 30) + 1;
+      carteira = dados[number];
+
+      if (!carteiras.includes(carteira) || carteiras == []) {
+        carteiras.push(carteira);
+      } else {
+        i--;
+      }
+    }
     desenharCarteiras(carteiras);
   }
 }
