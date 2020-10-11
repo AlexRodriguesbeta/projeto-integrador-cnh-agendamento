@@ -1,7 +1,7 @@
-// const url = 'https://sheet.best/api/sheets/23704868-8eff-4e28-a15f-799061419c17';
+const url = 'https://sheet.best/api/sheets/23704868-8eff-4e28-a15f-799061419c17';
 
 //Para teste, rode um json server com o arquivo DB_Carteira.json dentro da pasta js
-const url = 'http://localhost:3000/data';
+//const url = 'http://localhost:3000/data';
 
 //Retorna todos os dados da API
 async function buscarInfo() {
@@ -147,10 +147,44 @@ async function desenharCarteiras(info) {
   })
 }
 
-async function teste() {
+async function plotarCards() {
   const dados = await buscarInfo();
-  console.log(dados);
-  desenharCarteiras(dados);
+  //criando array vazio para guardar os cards aleatórios da home
+  let cards = [];
+  let card = new Object();
+
+  //gerando os cards aleatórios
+  for (let i = 0; i < 6; i++) {
+    let number = Math.floor(Math.random() * 30) + 1;
+
+    card = dados[number];
+
+    //garantindo que o card não será repetido
+    if (!cards.includes(card) || cards == []) {
+      cards.push(card);
+      // let cardAleatorio = document.querySelector(`.card-${i + 1}`);
+      // cardAleatorio.innerHTML = desenharCarteiras(card);
+    } else {
+      i--;
+    }
+  }
+
+  //pegando largura da tela
+  let width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+  //se a tela for maior que 670px, será mostrado todos os cards
+  if (width > 670) {
+    //console.log(dados);
+    desenharCarteiras(cards);
+    //senão, será mostrado apenas 2 cards
+  } else {
+    desenharCarteiras(cards);
+    let carteiras = [];
+    let carteira = document.getElementsByClassName('carteira');
+    carteiras.push(carteira[0]);
+    carteiras.push(carteira[1]);
+
+    desenharCarteiras(carteiras);
+  }
 }
 
-teste();
+plotarCards();
