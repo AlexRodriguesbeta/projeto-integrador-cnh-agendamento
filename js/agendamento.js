@@ -160,8 +160,7 @@ function escreveCarros() {
     let carrosHTML = document.getElementById('comboCarro');
     carrosHTML.innerHTML =
     `
-    <option value="Carro" hidden selected>Carro</option>
-    <option value="Carro" ></option>
+    <option value="Carro" selected>Todos os carros</option>
     `;
     let carros = ['Chevrolet',
                       'Citroën',
@@ -201,8 +200,7 @@ function escreveMunicipiosPorUF() {
     //Zerando a lista de municípios no HTML toda vez que a função é chamada
     municipiosHTML.innerHTML =
     `
-    <option value="Municipio" hidden selected>Município</option>
-    <option value="Municipio"></option>
+    <option value="Municipio" selected>Todos os municípios</option>
     `;
     let municipios = [];
     let estruturaMunicipio = "";
@@ -287,7 +285,7 @@ menosCarteira.addEventListener('click', () => {
     }
 });
 
-//  função filtrar versão 2
+//  função filtrar versão 3
 
 async function filter(){
 

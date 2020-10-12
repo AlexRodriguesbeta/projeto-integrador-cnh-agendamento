@@ -586,6 +586,11 @@ td {
 }
 
 @media (min-width:1024px) {
+
+    .sombra {
+        max-width: 90%;
+    }
+
     .carteira {
         height: 261px;
         width: 432px;
