@@ -161,6 +161,7 @@ function escreveCarros() {
     carrosHTML.innerHTML =
     `
     <option value="Carro" hidden selected>Carro</option>
+    <option value="Carro" ></option>
     `;
     let carros = ['Chevrolet',
                       'Citroën',
@@ -173,13 +174,14 @@ function escreveCarros() {
                       'Renault',
                       'Toyota',
                       'Volkswagen'];
-    let estruturaCarros = "";
-    carros.forEach(carros => {
-        let estruturaCarros =
+    let estruturaCarro = "";
+
+    carros.forEach(carro => {
+        estruturaCarro =
         `
-        <option value="${carros}">${carros}</option>
+        <option value="${carro}">${carro}</option>
         `;
-        carrosHTML.innerHTML += estruturaCarros;  
+        carrosHTML.innerHTML += estruturaCarro;  
       });
 
 }
@@ -200,6 +202,7 @@ function escreveMunicipiosPorUF() {
     municipiosHTML.innerHTML =
     `
     <option value="Municipio" hidden selected>Município</option>
+    <option value="Municipio"></option>
     `;
     let municipios = [];
     let estruturaMunicipio = "";
@@ -241,7 +244,7 @@ function escreveMunicipiosPorUF() {
       }
   
       municipios.forEach(municipio => {
-        let estruturaMunicipio =
+        estruturaMunicipio =
         `
         <option value="${municipio}">${municipio}</option>
         `;
