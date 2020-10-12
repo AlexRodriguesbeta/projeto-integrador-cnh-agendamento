@@ -125,6 +125,20 @@
     }
 }
 
+@media (min-width: 768px) {
+    .sombra {
+        top: 13px;
+        z-index: 1000;
+    }
+}
+
+@media (min-width: 1024px) {
+    .sombra {
+        top: 23px;
+        z-index: 1000;
+    }
+}
+
 @media (max-width: 575px) {
     .navbar-brand {
         margin-left: 25px;
