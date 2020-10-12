@@ -194,3 +194,12 @@ async function plotarCards() {
 }
 
 plotarCards();
+
+function navCollapseOnClick() {
+  let navButton = document.querySelector(".navbar-toggler");
+  let navDropdown = document.querySelector(".navbar-collapse");
+
+  navDropdown.classList.remove("show");
+  navButton.setAttribute("aria-expanded", "false");
+  navButton.classList.add("collapsed");
+}
