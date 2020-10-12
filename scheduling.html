@@ -6,8 +6,14 @@
     <title>Agendamento CNH-Prática</title>
     <link rel="stylesheet" href="css/bootstrap.min.css"> 
     <link rel="stylesheet" href="css/agendamento.css">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+      integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V"
+      crossorigin="anonymous"
+    />
 </head>
-<body>
+<body onload="escreveCarros()">
     
     <nav class="navbar navbar-expand-sm fixed-top navbar-dark" >
         <div class="container">
@@ -35,7 +41,7 @@
     </nav>
 
     <section class="corpo">
-        <div class="sombra">
+        <div class="sombra container fixed-top">
             <div id="rectangle">
                 <p>
                     <select name="comboUF" id="comboUF" class = "combobox"  onchange="escreveMunicipiosPorUF()">
@@ -46,12 +52,12 @@
                     </select>
                 </p>
                 <p>
-                    <select name="comboMunicipio" id="comboMunicipio" class = "combobox">
+                    <select name="comboMunicipio" id="comboMunicipio" class = "combobox" onchange="destaqueItemSelecionado('comboMunicipio');">
                         <option value="Municipio" hidden selected>Município</option>
                     </select>
                 </p>
                 <p>
-                    <select name="comboCarro" id="comboCarro" class = "combobox">
+                    <select name="comboCarro" id="comboCarro" class = "combobox" onchange="destaqueItemSelecionado('comboCarro');">
                         <option value="Carro" hidden selected>Carro</option>
                         <option value="Chevrolet">Chevrolet Prisma</option>
                         <option value="Hyundai">Hyundai HB20</option>
@@ -82,8 +88,10 @@
                     <span class="plusExp bg-dark">+</span>
                     <span>(anos)</span>
                 </p>
-
-                <button class="btn btn-primary"onclick="filter()">Filtrar</button>
+                
+                
+                <p> <button id="btnBuscar" class="btn btn-indigo btn-rounded btn-sm my-0 waves-effect waves-light" onclick="filter()" ><i class="fas fa-search active"></i>BUSCAR</button></p>
+                
             </div>
         </div>
 

@@ -1,8 +1,8 @@
- const url = 'https://sheet.best/api/sheets/23704868-8eff-4e28-a15f-799061419c17';
+ const url = 'https://sheet.best/api/sheets/23704868-8eff-4e28-a15f-799061419c17'; 
 
 //Para teste, rode um json server com o arquivo DB_Carteira.json dentro da pasta js
 
-// const url = 'http://localhost:3000/data';
+//const url = 'http://localhost:3000/data';
 
 //Retorna todos os dados da API
 async function buscarInfo() {
@@ -156,6 +156,41 @@ async function desenhaTudo() {
 
 desenhaTudo(); //Chamada ao carregar a página para desenhar tudo
 
+function escreveCarros() {
+    let carrosHTML = document.getElementById('comboCarro');
+    carrosHTML.innerHTML =
+    `
+    <option value="Carro" hidden selected>Carro</option>
+    `;
+    let carros = ['Chevrolet',
+                      'Citroën',
+                      'Fiat',
+                      'Ford',
+                      'Honda',
+                      'Hyundai',
+                      'Jeep',
+                      'Peugeot',
+                      'Renault',
+                      'Toyota',
+                      'Volkswagen'];
+    let estruturaCarros = "";
+    carros.forEach(carros => {
+        let estruturaCarros =
+        `
+        <option value="${carros}">${carros}</option>
+        `;
+        carrosHTML.innerHTML += estruturaCarros;  
+      });
+
+}
+
+
+function destaqueItemSelecionado(value) {
+    console.log(value);
+    let itemHTML = document.getElementById(value);
+    itemHTML.style.cssText = "font-weight: 700;";
+}
+
 function escreveMunicipiosPorUF() {
     //Pegando a UF que foi escolhida
     let siglaUF = document.getElementById('comboUF').value;
@@ -212,6 +247,8 @@ function escreveMunicipiosPorUF() {
         `;
         municipiosHTML.innerHTML += estruturaMunicipio;  
       });
+
+      destaqueItemSelecionado('comboUF');
 };
 
 let contadorCarteira = document.querySelector('.tempoCarteira');
@@ -250,6 +287,7 @@ menosCarteira.addEventListener('click', () => {
 //  função filtrar versão 2
 
 async function filter(){
+
     let urlFiltro = url + '/tabs/BaseCNH/search?'; 
     let uf = document.getElementById('comboUF'); 
     let municipio = document.getElementById('comboMunicipio'); 
@@ -313,8 +351,9 @@ async function filter(){
             alert("Sem resultados para a busca...");
         }
     }
-}
 
+    
+}
 
 
 async function buscarInfoFiltrada(urlFiltro) {
